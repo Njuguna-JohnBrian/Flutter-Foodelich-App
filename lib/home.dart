@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'card1.dart';
 
 // 1
 class Home extends StatefulWidget {
@@ -14,10 +15,7 @@ class _HomeState extends State<Home> {
 
   // 8
   static List<Widget> pages = <Widget>[
-    // TODO:Replace with CARD1
-    Container(
-      color: Colors.red,
-    ),
+    const Card1(),
     // TODO:Replace with CARD2
     Container(
       color: Colors.green,
@@ -39,10 +37,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Fooderlich',
-          // 2
-          style: Theme.of(context).textTheme.headline6,
+        title: Center(
+          child: Text(
+            'Fooderlich',
+            // 2
+            style: Theme.of(context).textTheme.headline6,
+          ),
         ),
       ),
       body: pages[_selectedIndex],
@@ -57,15 +57,21 @@ class _HomeState extends State<Home> {
         // 6
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
-            label: 'Card',
+            icon: Icon(
+              Icons.card_giftcard,
+            ),
+            label: 'Card1',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
+            icon: Icon(
+              Icons.card_giftcard,
+            ),
             label: 'Card2',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
+            icon: Icon(
+              Icons.card_giftcard,
+            ),
             label: 'CARD3',
           ),
         ],
