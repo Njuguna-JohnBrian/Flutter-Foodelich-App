@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
-import 'card1.dart';
-import 'card2.dart';
-import 'card3.dart';
-
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
-  State<Home> createState() => _HomeState();
+  _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
   static List<Widget> pages = <Widget>[
-    const Card1(),
-    const Card2(),
-    const Card3()
-    
+    // TODO: Replace with ExploreScreen
+    Container(color: Colors.white),
+    // TODO: Replace with RecipesScreen
+    Container(color: Colors.green),
+    Container(color: Colors.blue),
   ];
 
   void _onItemTapped(int index) {
@@ -31,12 +28,9 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Fooderlich',
-            // 2
-            style: Theme.of(context).textTheme.headline6,
-          ),
+        title: Text(
+          'Fooderlich',
+          style: Theme.of(context).textTheme.headline6,
         ),
       ),
       body: pages[_selectedIndex],
@@ -44,24 +38,18 @@ class _HomeState extends State<Home> {
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.card_giftcard,
-            ),
-            label: 'Card1',
+        items: <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.explore),
+            label: 'Explore',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.card_giftcard,
-            ),
-            label: 'Card2',
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Recipes',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.card_giftcard,
-            ),
-            label: 'CARD3',
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'To Buy',
           ),
         ],
       ),
