@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../components/components.dart';
-
 import '../models/models.dart';
 
 class RecipesGridView extends StatelessWidget {
@@ -22,14 +21,11 @@ class RecipesGridView extends StatelessWidget {
       ),
       child: GridView.builder(
         itemCount: recipes.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-        ),
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {
           final simpleRecipe = recipes[index];
-          return RecipeThumbnail(
-            recipe: simpleRecipe,
-          );
+          return RecipeThumbnail(recipe: simpleRecipe);
         },
       ),
     );

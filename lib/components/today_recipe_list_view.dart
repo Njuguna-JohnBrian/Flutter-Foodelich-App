@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../components/components.dart';
-
-import '../models/explore_recipe.dart';
 import '../models/models.dart';
 
 class TodayRecipeListView extends StatelessWidget {
   final List<ExploreRecipe> recipes;
+
   const TodayRecipeListView({
     Key? key,
     required this.recipes,
@@ -24,12 +23,10 @@ class TodayRecipeListView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Recipes Of The Day 🍳',
+            'Recipes of the Day 🍳',
             style: Theme.of(context).textTheme.headline1,
           ),
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16),
           Container(
             height: 400,
             color: Colors.transparent,
@@ -41,9 +38,7 @@ class TodayRecipeListView extends StatelessWidget {
                 return buildCard(recipe);
               },
               separatorBuilder: (context, index) {
-                return const SizedBox(
-                  width: 16,
-                );
+                return const SizedBox(width: 16);
               },
             ),
           ),
