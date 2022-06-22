@@ -34,7 +34,7 @@ class _FooderlichState extends State<Fooderlich> {
   }
 
   @override
-  Widget build(BuildContext context) {  
+  Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
@@ -62,7 +62,7 @@ class _FooderlichState extends State<Fooderlich> {
             title: 'Fooderlich',
             home: Router(
               routerDelegate: _appRouter,
-              // TODO: Add backButtonDispatcher
+              backButtonDispatcher: RootBackButtonDispatcher(),
             ),
           );
         },
