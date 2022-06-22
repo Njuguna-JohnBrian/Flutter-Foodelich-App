@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                 height: 200,
                 child: Image(
                   image: AssetImage(
-                    'assets/fooderlich_assets/rw_logo.png',
+                    'assets/logo.jpg',
                   ),
                 ),
               ),
@@ -79,7 +79,7 @@ class LoginScreen extends StatelessWidget {
       decoration: InputDecoration(
         border: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.green,
+            color: Color.fromARGB(255, 152, 175, 76),
             width: 1.0,
           ),
         ),
