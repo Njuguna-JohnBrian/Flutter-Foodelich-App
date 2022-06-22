@@ -89,8 +89,7 @@ class _HomeState extends State<Home> {
           ),
         ),
         onTap: () {
-          print('object');
-          Provider.of<AppStateManager>(context, listen: false)
+          Provider.of<ProfileManager>(context, listen: false)
               .tapOnProfile(true);
         },
       ),
