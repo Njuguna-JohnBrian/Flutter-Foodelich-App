@@ -60,4 +60,6 @@ class AppStateManager extends ChangeNotifier {
     initializeApp();
     notifyListeners();
   }
+
+  void tapOnProfile(bool bool) {}
 }
