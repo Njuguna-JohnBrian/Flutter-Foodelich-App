@@ -60,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       children: [
         buildDarkModeRow(),
         ListTile(
-          title: const Text('View raywenderlich.com'),
+          title: const Text('View John Brian\'s Blog'),
           onTap: () {
             Provider.of<ProfileManager>(context, listen: false)
                 .tapOnRaywenderlich(true);
